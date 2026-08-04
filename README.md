@@ -15,7 +15,7 @@ A scalable and extensible notification platform built with **ASP.NET Core** and 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The project follows **Clean Architecture**.
 
@@ -30,7 +30,7 @@ NotificationPlatform.sln
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - ASP.NET Core
 - Entity Framework Core
@@ -41,7 +41,7 @@ NotificationPlatform.sln
 
 ---
 
-## 📂 Domain Model
+## Domain Model
 
 Current domain entities:
 
@@ -54,7 +54,7 @@ Current domain entities:
 
 ---
 
-## 📌 Project Status
+## Project Status
 
 🚧 Under Development
 
