@@ -1,61 +1,55 @@
 # Notification Platform
 
-A scalable and extensible notification platform built with **ASP.NET Core** and **Clean Architecture**. The system enables applications to manage notification templates, process events, and deliver notifications through multiple channels such as Email, SMS, and Push Notifications.
+A scalable, event-driven notification platform built with ASP.NET Core, designed to deliver notifications through multiple channels including Email, SMS, and Push Notifications. The platform follows Clean Architecture principles to ensure maintainability, scalability, and extensibility.
 
 ## Features
 
 - Event-driven notification processing
-- Notification templates
-- Multi-channel delivery (Email, SMS, Push)
+- Multi-channel notifications (Email, SMS, Push)
+- Notification templates with dynamic placeholders
 - User notification preferences
-- Retry mechanism for failed deliveries
-- Delivery status tracking
-- Quiet hours support
-- Background processing (coming soon)
-
----
+- Delivery tracking
+- Background processing
+- Retry mechanism for failed notifications
+- Secure authentication using ASP.NET Identity & JWT
+- Strategy Pattern for notification providers
+- Docker support
 
 ## Architecture
 
 The project follows **Clean Architecture**.
 
-```text
-NotificationPlatform.sln
-
+```
+NotificationPlatform
+│
 ├── NotificationPlatform.API
 ├── NotificationPlatform.Application
 ├── NotificationPlatform.Domain
 └── NotificationPlatform.Infrastructure
 ```
 
----
-
 ## Tech Stack
 
 - ASP.NET Core
+- C#
 - Entity Framework Core
 - SQL Server
 - ASP.NET Identity
-- Clean Architecture
-- REST API
-
----
-
-## Domain Model
-
-Current domain entities:
-
-- ApplicationUser
-- Event
-- NotificationTemplate
-- Notification
-- NotificationDelivery
-- UserPreference
-
----
+- JWT Authentication
+- RabbitMQ
+- MailKit
+- Docker
 
 ## Project Status
 
-🚧 Under Development
+🚧 Currently under active development.
 
-This project is currently under active development.
+## Future Enhancements
+
+- SMS Provider Integration
+- Push Notification Provider
+- Notification Scheduling
+- Dashboard & Analytics
+- Logging with Serilog
+- Unit Testing
+- CI/CD Pipeline
