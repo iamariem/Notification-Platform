@@ -22,9 +22,9 @@ The system follows **Clean Architecture** and uses the **Strategy Pattern** and 
 
 ---
 
-## Architecture
+## Architecture Diagram
 
-![NotificationPlatform Architecture](docs/architecture.png)
+<img src="docs/architecture.png" alt="NotificationPlatform Architecture" width="600"/>
 
 ### Project Structure
 
@@ -55,7 +55,8 @@ NotificationPlatform
 │       └── Program.cs
 │
 ├── docs
-│   └── architecture.png
+│   ├── architecture.png
+│   └── swagger.png
 │
 ├── .gitignore
 ├── NotificationPlatform.slnx
@@ -144,6 +145,28 @@ POST /api/Notifications
 ```http
 GET /api/Notifications/{id}
 ```
+
+---
+
+## API Documentation
+
+The API is documented using Swagger/OpenAPI.
+
+<img src="docs/swagger.png" alt="Swagger API Documentation" width="700"/>
+
+---
+
+## Testing
+
+The system covers:
+
+- Notification creation
+- Notification retrieval
+- RabbitMQ message publishing
+- Consumer processing
+- Notification provider selection
+- Retry handling
+- Delivery status updates
 
 ---
 
