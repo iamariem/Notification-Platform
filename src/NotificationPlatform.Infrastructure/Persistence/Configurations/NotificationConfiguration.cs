@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NotificationPlatform.Domain.Entities;
+using NotificationPlatform.Infrastructure.Entities;
 
 namespace NotificationPlatform.Infrastructure.Persistence.Configurations;
 
@@ -21,7 +22,7 @@ public class NotificationConfiguration : IEntityTypeConfiguration<Notification>
         builder.Property(n => n.CreatedAt)
                .HasDefaultValueSql("GETUTCDATE()");
 
-        builder.HasOne(n => n.User)
+        builder.HasOne<ApplicationUser>()
                .WithMany(u => u.Notifications)
                .HasForeignKey(n => n.UserId)
                .OnDelete(DeleteBehavior.Restrict);

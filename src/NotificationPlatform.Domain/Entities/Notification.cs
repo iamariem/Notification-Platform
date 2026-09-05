@@ -4,7 +4,6 @@ namespace NotificationPlatform.Domain.Entities
     {
         public int Id { get; set; }
         public string UserId { get; set; } = default!;
-        public ApplicationUser User { get; set; } = default!;
         public int TemplateId { get; set; }
         public NotificationTemplate Template { get; set; } = default!;
         public string? Subject { get; set; }
