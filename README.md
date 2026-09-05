@@ -23,8 +23,9 @@ The system follows **Clean Architecture** and uses the **Strategy Pattern** and 
 ---
 
 ## Architecture Diagram
-
-<img src="docs/architecture.png" alt="NotificationPlatform Architecture" width="600"/>
+<p align="center">
+<img src="docs/architecture.png" alt="NotificationPlatform Architecture"  width="450"/>
+</p>
 
 ### Project Structure
 
@@ -62,41 +63,6 @@ NotificationPlatform
 ├── NotificationPlatform.slnx
 └── README.md
 ```
-
----
-
-## Notification Flow
-
-```text
-Client
-   │
-   ▼
-API Layer
-   │
-   ▼
-Application Layer
-   │
-   ▼
-SQL Server
-   │
-   ▼
-RabbitMQ
-   │
-   ▼
-Consumer
-   │
-   ▼
-NotificationEngine
-   │
-   ▼
-Strategy Factory
-   │
-   ├──► Email
-   ├──► SMS
-   └──► Push
-```
-
-RabbitMQ handles asynchronous processing, while the Strategy Pattern selects the appropriate notification provider.
 
 ---
 
@@ -148,14 +114,6 @@ GET /api/Notifications/{id}
 
 ---
 
-## API Documentation
-
-The API is documented using Swagger/OpenAPI.
-
-<img src="docs/swagger.png" alt="Swagger API Documentation" width="700"/>
-
----
-
 ## Testing
 
 The system covers:
@@ -177,10 +135,17 @@ The system covers:
 | C# | Programming Language |
 | .NET 10 | Application Framework |
 | ASP.NET Core | Web API |
-| Entity Framework Core | ORM |
-| SQL Server | Database |
-| RabbitMQ | Message Broker |
+| RESTful API | API Design & Communication |
+| Clean Architecture | Software Architecture |
+| Entity Framework Core | ORM & Database Access |
+| SQL Server | Relational Database |
 | ASP.NET Core Identity | Authentication & User Management |
+| RabbitMQ | Message Broker |
+| BackgroundService | Background Processing |
+| Strategy Pattern | Notification Provider Selection |
+| Factory Pattern | Notification Sender Creation |
 | FluentValidation | Request Validation |
-| Swagger | API Documentation |
+| Swagger / OpenAPI | API Documentation |
 | Docker | Containerization |
+| Dependency Injection | Service Management |
+| Git & GitHub | Version Control |
